@@ -11,7 +11,7 @@ test('getPath test 1', async () => {
     expect($element).toBeTruthy();
 
     const selector = getPath($element);
-    expect(selector).toBe('body div.test-class-container ul.test-class-list li#test-1.test-class:first-child');
+    expect(selector).toBe('body div.test-class-container ul.test-class-list li#test-1');
 
     const element = jsDom.window.document.querySelector(selector);
     expect(element).toBeTruthy();
@@ -22,11 +22,11 @@ test('getPath test 1', async () => {
 });
 
 test('getPath test 2', async () => {
-    const $element = jsDom.window.document.getElementById('test-2');
+    const $element = jsDom.window.document.querySelector('.test-class-list li:nth-child(2)');
     expect($element).toBeTruthy();
 
     const selector = getPath($element);
-    expect(selector).toBe('body div.test-class-container ul.test-class-list li#test-2.test-class:nth-child(2)');
+    expect(selector).toBe('body div.test-class-container ul.test-class-list li.test-class:nth-child(2)');
 
     const element = jsDom.window.document.querySelector(selector);
     expect(element).toBeTruthy();
@@ -36,11 +36,11 @@ test('getPath test 2', async () => {
 });
 
 test('getPath test 3', async () => {
-    const $element = jsDom.window.document.getElementById('test-3');
+    const $element = jsDom.window.document.querySelector('.test-class-list li:last-child');
     expect($element).toBeTruthy();
 
     const selector = getPath($element);
-    expect(selector).toBe('body div.test-class-container ul.test-class-list li#test-3.test-class:last-child');
+    expect(selector).toBe('body div.test-class-container ul.test-class-list li.test-class:last-child');
 
     const element = jsDom.window.document.querySelector(selector);
     expect(element).toBeTruthy();
