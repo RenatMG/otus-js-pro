@@ -1,0 +1,12 @@
+{
+  "name": "js-pro-4",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tree": "node index.js --path=./foo"
+  },
+  "author": "",
+  "license": "ISC"
+}
